@@ -47,9 +47,11 @@ public class BookReaderController {
         freqbtn.addActionListener(event -> model.sort((e1, e2) -> e2.getValue() - e1.getValue()));
         searchBtn.addActionListener(event -> {
             boolean exists = false;
-            for (Map.Entry<String, Integer> s: counter.getWordList()) {
-                if (s.getKey().equals(field.getText().toLowerCase().trim())) {
-                    listView.ensureIndexIsVisible(counter.getWordList().indexOf(s));
+            String searchText = field.getText().toLowerCase().trim();
+            for (int i = 0; i<model.getSize();i++) {
+                if (model.getElementAt(i).getKey().equals(searchText)) {
+                    listView.ensureIndexIsVisible(i);
+                    listView.setSelectedIndex(i);
                     exists = true;
                     break;
                 }
