@@ -49,13 +49,9 @@ public class MountainFractal extends Fractal {
         Side s = new Side(a,b);
         Side s2 = new Side(b,a);
         if (map.containsKey(s)) {
-            Point temp = map.get(s);
-            map.remove(s, temp);
-            return temp;
+            return map.remove(s);
         }else if(map.containsKey(s2)) {
-            Point temp = map.get(s2);
-            map.remove(s2, temp);
-            return temp;
+            return map.remove(s2);
         } else {
             Point p = new Point(((a.getX() + b.getX()) / 2), ((a.getY() + b.getY()) /2) + (int) RandomUtilities.randFunc(dev));
             map.put(s,p);

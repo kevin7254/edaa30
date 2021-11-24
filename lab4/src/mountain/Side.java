@@ -15,7 +15,7 @@ public class Side {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Side side = (Side) o;
-        return Objects.equals(a, side.a) && Objects.equals(b, side.b);
+        return (Objects.equals(a, side.a) && Objects.equals(b, side.b));
     }
 
     @Override
