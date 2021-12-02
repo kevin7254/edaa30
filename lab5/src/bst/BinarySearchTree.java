@@ -43,6 +43,13 @@ public class BinarySearchTree<E extends Comparable<? super E>> {
         tree.add(15);
         tree.add(19);
         tree.add(29);
+        tree.add(32);
+        tree.add(24);
+        tree.add(44);
+        tree.add(29);
+        tree.add(34);
+        tree.add(42);
+        tree.add(32);
         tree.rebuild();
         visualizer.drawTree(tree);
     }
